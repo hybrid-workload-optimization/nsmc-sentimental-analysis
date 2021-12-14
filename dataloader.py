@@ -50,7 +50,9 @@ if __name__ == "__main__":
     from model import MovieClassifier
     model = MovieClassifier()
     tokenizer = AutoTokenizer.from_pretrained('bert-base-multilingual-cased', do_lower_case=False, use_fast=True)
-    tr_ds = MovieDataset(tokenizer, '/home/moo/data/naver_movie/ratings.txt')
+    # input data(ratings.txt) path into data_path
+    data_path = ''
+    tr_ds = MovieDataset(tokenizer, data_path)
     tr_dl = DataLoader(tr_ds, shuffle=True, batch_size=64, pin_memory=True)
     input_ids, labels, attn_masks = next(iter(tr_dl))
     print(input_ids)
