@@ -1,1 +1,1 @@
-# nsmc_sentimental_analysis
+# nsmc-sentimental-analysis
