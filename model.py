@@ -14,8 +14,7 @@ class MovieClassifier(nn.Module):
         self.emb = AutoModel.from_pretrained('bert-base-multilingual-cased')
         self.fc = nn.Linear(hidden_dim, n_labels)
 
-    def forward(self, inputs):
-        import pdb; pdb.set_trace()
+    def forward(self, inputs):        
         outputs = self.emb(inputs)
         logits = self.fc(outputs[0])
 
