@@ -47,7 +47,8 @@ if __name__ == "__main__":
 
         train_input_file = "./ratings.txt"
         vocab_size = 35000
-        prefix = "/home/videorighter/data/naver_movie/nsmc" 
+        ### input nsmc model path into perfix
+        prefix = "" 
         pad_id=0
         bos_id=1
         eos_id=2
